@@ -1,16 +1,7 @@
-require("./xyz");
+const { calculateSum, calculateMultiply } = require("./calculate");
 
-var { x, calculateSum } = require("./sum");
+var a = 6;
+var b = 9;
 
-var name = "Ayush Porwal";
-
-var a = 10;
-
-var b = 20;
-
-console.log(name);
-
-var sum = calculateSum(a, b);
-console.log(sum);
-
-console.log(x);
+calculateSum(a, b);
+calculateMultiply(a, b);
