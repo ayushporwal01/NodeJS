@@ -1,6 +1,6 @@
 require("./xyz");
 
-var calculateSum = require("./sum");
+var obj = require("./sum");
 
 var name = "Ayush Porwal";
 
@@ -10,5 +10,7 @@ var b = 20;
 
 console.log(name);
 
-var sum = calculateSum(a, b);
+var sum = obj.calculateSum(a, b);
 console.log(sum);
+
+console.log(obj.x);
