@@ -1,7 +1,7 @@
-var x = "Hello World!";
+export var x = "Hello World!";
 
-function calculateSum(a, b) {
+export function calculateSum(a, b) {
   return a + b;
 }
 
-module.exports = {x, calculateSum };
+// module.exports = {x, calculateSum };
