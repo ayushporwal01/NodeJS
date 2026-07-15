@@ -1,5 +1,6 @@
 require("./xyz");
-require("./sum");
+
+var calculateSum = require("./sum");
 
 var name = "Ayush Porwal";
 
