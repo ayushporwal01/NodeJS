@@ -1,8 +1,6 @@
-// require("./xyz");
+require("./xyz");
 
-// import { x, calculateSum } = require("./sum");
-
-import { x, calculateSum } from "./sum.js";
+var { x, calculateSum } = require("./sum");
 
 var name = "Ayush Porwal";
 
