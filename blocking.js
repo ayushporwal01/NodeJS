@@ -12,10 +12,10 @@ crypto.pbkdf2Sync("password", "salt", 5000000, 50, "sha512");
 //   console.log("Key is generated");
 // });
 
-function multiplyFn() {
+function multiplyFn(x, y) {
   var result = a * b;
   return result;
 }
 
-var c = multiplyFn();
+var c = multiplyFn(a, b);
 console.log("Multiplication result is", c);

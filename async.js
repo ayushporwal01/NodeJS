@@ -23,10 +23,10 @@ fs.readFile("./file.txt", "utf-8", (err, data) => {
 });
 
 //First
-function multiplyFn() {
+function multiplyFn(x, y) {
   var result = a * b;
   return result;
 }
 
-var c = multiplyFn();
+var c = multiplyFn(a, b);
 console.log("Multiplication result is", c);
