@@ -4,8 +4,8 @@ const https = require("https");
 //First
 console.log("Hello i'm in async");
 
-var a = 123456789;
-var b = 987654321;
+var a = 157586;
+var b = 759138;
 
 //Second
 https.get("https://dummyjson.com/products/1", (res) => {
@@ -25,7 +25,8 @@ fs.readFile("./file.txt", "utf-8", (err, data) => {
 //First
 function multiplyFn() {
   var result = a * b;
-  console.log(result);
+  return result;
 }
 
 var c = multiplyFn();
+console.log("Multiplication result is", c);
