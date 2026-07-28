@@ -1,3 +1,11 @@
+//a=100
+//last line of the file
+//process.nextTick
+//Promise
+//Timer expired!
+//setImmediate
+//File Reading CB
+
 const fs = require("fs");
 const a = 100;
 
@@ -7,9 +15,13 @@ fs.readFile("./file.txt", "utf8", () => {
   console.log("File Reading CB");
 });
 
+Promise.resolve("Promise").then(console.log);
+
 setTimeout(() => {
   console.log("Timer expired!");
 }, 0);
+
+process.nextTick(() => console.log("process.nextTick"));
 
 function printA() {
   console.log("a=", a);
@@ -17,4 +29,4 @@ function printA() {
 
 printA();
 
-console.log("Last line of the file")
+console.log("Last line of the file");
