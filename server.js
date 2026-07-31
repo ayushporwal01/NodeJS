@@ -4,4 +4,4 @@ const server = http.createServer(function (req, res) {
   res.end("Hello World!");
 });
 
-server.listen(69);
+server.listen(6969);
