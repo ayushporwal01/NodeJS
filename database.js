@@ -1,9 +1,14 @@
+const dns = require("dns");
+
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 const { MongoClient } = require("mongodb");
 // or as an es module:
 // import { MongoClient } from 'mongodb'
 
 //Connection
-const url = "mongodb://localhost:27017";
+const url =
+  "mongodb+srv://porwalayush953_db_user:GRnXJ8JIJbqfjgCx@namastenodejs.nnvpyuv.mongodb.net/?appName=NamasteNodeJS";
 const client = new MongoClient(url);
 
 //Database Name
@@ -18,8 +23,9 @@ async function main() {
   const db = client.db(dbName);
   const collection = db.collection("User");
 
-  
-  // the following code examples can be pasted here...
+  //Read
+  const findResult = await collection.find({}).toArray();
+  console.log("Found documents =>", findResult);
 
   return "done";
 }
