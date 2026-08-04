@@ -8,7 +8,7 @@ const { MongoClient } = require("mongodb");
 
 //Connection
 const url =
-  "mongodb+srv://porwalayush953_db_user:GRnXJ8JIJbqfjgCx@namastenodejs.nnvpyuv.mongodb.net/?appName=NamasteNodeJS";
+  "mongodb+srv://porwalayush953_db_user:4fYhy3FHQd3ACBty@namastenodejs.nnvpyuv.mongodb.net/?appName=NamasteNodeJS";
 const client = new MongoClient(url);
 
 //Database Name
@@ -26,6 +26,16 @@ async function main() {
   //Read
   const findResult = await collection.find({}).toArray();
   console.log("Found documents =>", findResult);
+
+  //Insert
+  const insertResult = await collection.insertOne({
+    firstname: "Samay",
+    lastname: "Raina",
+    city: "Delhi",
+    country: "India",
+  });
+
+  console.log(insertResult);
 
   return "done";
 }
