@@ -37,6 +37,10 @@ async function main() {
 
   console.log(insertResult);
 
+  //Delete
+  const deleteResult = await collection.deleteOne({ firstname: "Samay" });
+  console.log(deleteResult);
+
   return "done";
 }
 
