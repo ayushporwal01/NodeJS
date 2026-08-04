@@ -23,10 +23,6 @@ async function main() {
   const db = client.db(dbName);
   const collection = db.collection("User");
 
-  //Read
-  const findResult = await collection.find({}).toArray();
-  console.log("Found documents =>", findResult);
-
   //Insert
   const insertResult = await collection.insertOne({
     firstname: "Samay",
@@ -37,9 +33,21 @@ async function main() {
 
   console.log(insertResult);
 
+  //Update
+  const updateResult = await collection.updateMany(
+    {},
+    { $unset: { country: "" } },
+  );
+
+  console.log(updateResult);
+
   //Delete
   const deleteResult = await collection.deleteOne({ firstname: "Samay" });
   console.log(deleteResult);
+
+  //Read
+  const findResult = await collection.find({}).toArray();
+  console.log("Found documents =>", findResult);
 
   return "done";
 }
